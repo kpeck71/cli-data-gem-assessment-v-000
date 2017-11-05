@@ -6,6 +6,9 @@ require_relative "./astoria_news/version"
 require_relative "./astoria_news/cli"
 require_relative "./astoria_news/news_scraper"
 
+require "astoria_news/version"
+
+
 module AstoriaNews
   # Your code goes here...
 end

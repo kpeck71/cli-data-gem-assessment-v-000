@@ -17,14 +17,16 @@ class AstoriaNews::CLI
     input = nil
     while input != "exit"
       puts "Enter the number of the article you'd like to read about."
-      puts "Type list to see all articles or type exit."
+      puts "Type list to see all articles, or type exit."
       input = gets.strip.downcase
 
     if input.to_i > 0
     article = @news[input.to_i-1]
-    puts "Here is where the article body will go"
+    puts article.url
       elsif input == "list"
         list_articles
+      elsif input == "exit"
+        break
       else
         puts "String here for else condition"
       end
@@ -32,10 +34,11 @@ class AstoriaNews::CLI
   end
 
   def read_article
+    puts news.url
   end
 
   def goodbye
-    puts "Goodbye! Check back again tomorrow for more Astoria news."
+    puts "Goodbye! Check back again tomorrow for more news from Queens."
   end
 
 end

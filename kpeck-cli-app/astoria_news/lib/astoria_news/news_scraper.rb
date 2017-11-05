@@ -1,6 +1,6 @@
 class AstoriaNews::NewsScraper
 
-  attr_accessor :title
+  attr_accessor :title, :url
 
   def self.scrape
     all = []
@@ -10,11 +10,11 @@ class AstoriaNews::NewsScraper
   end
 
   def self.scrape_arts
-    doc = Nokogiri::HTML(open("http://qns.com/news/arts-entertainment/"))
+    doc = Nokogiri::HTML(open("http://www.ny1.com/nyc/queens"))
     news = self.new
-    news.title = "Title here"
-    #news.title = doc.search(".entry-post-info").text
-    #news.short_description = doc.search(".article-header.article-body").text.strip
+    #doc.search(".recipe-results.recipe-results-titles.h3").text
+    news.title = "Scraper work in progress. Title here."
+    news.url = "http://google.com"
     news
   end
 

@@ -6,12 +6,11 @@ class AstoriaNews::CLI
   end
 
   def list_article
-    puts <<-HEREDOC
-    1. This is a title
-    This is a short description
-    2. This is another title
-    This is a short description
-    HEREDOC
+    puts "Here is the latest from Queens"
+    @news = AstoriaNews::NewsScraper.scrape
+    @news.each.with_index(1) do |article, i|
+        puts "#{i}. #{article.title}"
+      end
   end
 
   def options

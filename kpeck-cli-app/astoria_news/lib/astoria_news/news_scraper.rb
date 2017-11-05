@@ -1,28 +1,28 @@
 class AstoriaNews::NewsScraper
 
-  attr_accessor :title, :short_description
+  attr_accessor :title
 
   def self.scrape
     all = []
-    all << self.scrape_news
-    #all << self.scrape_food
-    #all << self.scrape_deals
+    all << self.scrape_arts
+    #all << self.scrape_business
+    #all << self.scrape_dining
   end
 
-  def self.scrape_news
-    doc = Nokogiri::HTML(open("http://weheartastoria.com/category/news/"))
-binding.pry
+  def self.scrape_arts
+    doc = Nokogiri::HTML(open("http://qns.com/news/arts-entertainment/"))
     news = self.new
-    news.title = doc.search(".article.h2").text.strip
-    news.short_description = doc.search(".article-header.article-body").text
+    news.title = "Title here"
+    #news.title = doc.search(".entry-post-info").text
+    #news.short_description = doc.search(".article-header.article-body").text.strip
     news
   end
 
-  def scrape_food
+  def scrape_business
 
   end
 
-  def scrape_deals
+  def scrape_dining
   end
 
 end

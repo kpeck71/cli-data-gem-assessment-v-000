@@ -5,8 +5,8 @@ class AstoriaNews::NewsScraper
   def self.scrape
     all = []
     all << self.scrape_arts
-    #all << self.scrape_business
-    #all << self.scrape_dining
+    #all << self.scrape_biz
+    #all << self.scrape_food
   end
 
   def self.scrape_arts
@@ -18,11 +18,11 @@ class AstoriaNews::NewsScraper
     news
   end
 
-  def scrape_business
+  def scrape_biz
 
   end
 
-  def scrape_dining
+  def scrape_food
   end
 
 end

@@ -1,11 +1,8 @@
 #!/usr/bin/env ruby
 
-<<<<<<< HEAD
-=======
 require "bundler/setup"
-require "astoria_news"
+require "code/newbie/cli/app"
 
->>>>>>> ca734d984f0abff60945003c4b59d8558aef3973
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
 

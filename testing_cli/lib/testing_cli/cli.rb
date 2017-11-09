@@ -34,6 +34,8 @@ class TestingCli::CLI
         puts "This is not a valid entry. Please enter restart to try again."
       elsif "exit"
         exit
+      else
+        "That doesn't look like a valid entry. Please enter a valid episode number, 'list', or 'exit'."
       end
       #else "not a valid entry. How to get it to restart and accept other episode numbers?"
       input = gets.strip
@@ -54,8 +56,6 @@ class TestingCli::CLI
           puts "Please enter an episode number."
       when "exit"
         exit
-      else
-          "That doesn't look like a valid entry. Please enter a valid episode number, 'list', or 'exit'."
       end
     end
   end

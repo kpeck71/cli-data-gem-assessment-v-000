@@ -50,6 +50,8 @@ class TestingCli::CLI
       when "list"
           print_episodes
           puts "Please enter an episode number."
+      when "exit"
+        exit
       else
           "That doesn't look like a valid entry. Please enter a valid episode number, 'list', or 'exit'."
       end

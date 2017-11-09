@@ -8,6 +8,7 @@ class TestingCli::CLI
 
   def welcome
     puts "Welcome to the Code Newbie episode list. Here is a list of all Code Newbie episode titles."
+    puts " "
   end
 
   def print_episodes

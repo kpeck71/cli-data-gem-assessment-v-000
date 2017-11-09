@@ -48,7 +48,6 @@ class TestingCli::CLI
           "That doesn't look like a valid entry. Please enter a valid episode number, 'list', or 'exit'."
       end
     end
-    end
   end
 
 end

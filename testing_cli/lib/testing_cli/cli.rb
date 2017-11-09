@@ -32,7 +32,7 @@ class TestingCli::CLI
         puts " "
       elsif 0 || answer > num_episodes
         puts "This is not a valid entry. Please enter restart to try again."
-      elsif "exit"
+      elsif answer =="exit"
         exit
       else
         "That doesn't look like a valid entry. Please enter a valid episode number, 'list', or 'exit'."

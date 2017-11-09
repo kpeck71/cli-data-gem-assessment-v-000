@@ -28,7 +28,6 @@ class TestingCli::CLI
         puts "#{episode.short_des}"
         puts "\nIf you would like to learn more about this episode, enter 'more'. To see full list of episodes again, enter 'list', or type 'exit'."
         puts " "
-        input = gets.strip
       end
       #else "not a valid entry. How to get it to restart and accept other episode numbers?"
       input = gets.strip

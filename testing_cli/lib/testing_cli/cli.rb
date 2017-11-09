@@ -30,7 +30,7 @@ class TestingCli::CLI
         puts "#{episode.short_des}"
         puts "\nIf you would like to learn more about this episode, enter 'more'. To see full list of episodes again, enter 'list', or type 'exit'."
         puts " "
-      elsif "0" || answer > num_episodes
+      elsif 0 || answer > num_episodes
         puts "This is not a valid entry. Please enter restart to try again."
       else "exit"
         exit

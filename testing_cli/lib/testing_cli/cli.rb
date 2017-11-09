@@ -32,7 +32,7 @@ class TestingCli::CLI
         puts " "
       elsif 0 || answer > num_episodes
         puts "This is not a valid entry. Please enter restart to try again."
-      else "exit"
+      elsif "exit"
         exit
       end
       #else "not a valid entry. How to get it to restart and accept other episode numbers?"

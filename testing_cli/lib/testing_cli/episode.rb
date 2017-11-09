@@ -1,5 +1,5 @@
 class TestingCli::Episode
-  attr_accessor :title, :short_des, :url, :date
+  attr_accessor :title, :short_des, :url, :date, :content
   @@all = []
 
   def self.all
@@ -10,11 +10,11 @@ class TestingCli::Episode
     @@all << self
   end
 
-  def initialize(title=nil, short_des=nil, url=nil, date=nil)
-    @title = title
-    @short_des = short_des
-    @url = url
-    @date = date
-    @@all << self
+  def content
+    @content ||= TestingCli::Scraper.new(url).scrape_details
   end
+
+  # def open_to_listen
+  #   Launchy.open("https://www.codenewbie.org#{url}'")
+  # end
 end

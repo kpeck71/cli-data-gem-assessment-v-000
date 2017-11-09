@@ -21,6 +21,7 @@ class TestingCli::CLI
     while input != "exit"
       puts " "
       puts "Which episode would you like to learn more about? Please enter the episode number:"
+      num_episodes = TestingCli::Episode.all.size
       answer = gets.strip
       if answer.to_i <= TestingCli::Episode.all.size && answer.to_i != 0
         episode = TestingCli::Episode.all[-(answer.to_i)] #make sure 0 is not a valid entry
@@ -28,6 +29,7 @@ class TestingCli::CLI
         puts "#{episode.short_des}"
         puts "\nIf you would like to learn more about this episode, enter 'more'. To see full list of episodes again, enter 'list', or type 'exit'."
         puts " "
+      else "0" || 
       end
       #else "not a valid entry. How to get it to restart and accept other episode numbers?"
       input = gets.strip

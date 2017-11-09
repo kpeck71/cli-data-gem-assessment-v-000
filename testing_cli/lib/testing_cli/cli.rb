@@ -30,6 +30,7 @@ class TestingCli::CLI
         puts "\nIf you would like to learn more about this episode, enter 'more'. To see full list of episodes again, enter 'list', or type 'exit'."
         puts " "
       else "0"
+        puts "This is not a valid entry. Please enter an existing episode number."
       end
       #else "not a valid entry. How to get it to restart and accept other episode numbers?"
       input = gets.strip

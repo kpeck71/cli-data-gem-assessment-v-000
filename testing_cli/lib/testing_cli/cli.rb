@@ -37,7 +37,7 @@ class TestingCli::CLI
           puts "\nWould you like to see the full episode list again? Enter 'list'."
           puts "Or enter 'exit'."
             answer2 = gets.strip #downcase?
-            if input == "list"
+            if answer2 == "list"
               print_episodes
               puts "Please enter an episode number."
             end

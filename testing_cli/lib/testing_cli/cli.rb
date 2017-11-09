@@ -46,6 +46,8 @@ class TestingCli::CLI
             if answer2 == "list"
               print_episodes
               puts "Please enter an episode number."
+            else answer2 == "exit"
+              exit
             end
       when "list"
           print_episodes
